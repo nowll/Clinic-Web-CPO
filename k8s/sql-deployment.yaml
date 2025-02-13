@@ -2,16 +2,16 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   namespace: clinic-cpo
-  name: web-clinic
+  name: klinik-db
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: clinicCpo
+      app: klinik-db
   template:
     metadata:
       labels:
-        app: clinicCpo
+        app: klinik-db
     spec:
       containers:
       - name: mysql

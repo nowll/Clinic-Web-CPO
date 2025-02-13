@@ -7,11 +7,11 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: clinicCpo
+      app: klinik-web
   template:
     metadata:
       labels:
-        app: clinicCpo
+        app: klinik-web
     spec:
       containers:
       - name: web
