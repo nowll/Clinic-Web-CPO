@@ -7,14 +7,14 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: clinic-cpo
+      app: clinicCpo
   template:
     metadata:
       labels:
-        app: clinic-cpo
+        app: clinicCpo
     spec:
       containers:
       - name: web
-        image: $REGISTRY/$DOCKERHUB_USERNAME/$APP_NAME
+        image: docker.io/youlong255/klinik:latest
         ports:
         - containerPort: 80

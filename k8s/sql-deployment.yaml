@@ -7,11 +7,11 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: $PROJECT_NAME
+      app: clinicCpo
   template:
     metadata:
       labels:
-        app: $PROJECT_NAME
+        app: clinicCpo
     spec:
       containers:
       - name: mysql
