@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  namespace: $PROJECT_NAME
+  namespace: clinic-cpo
   name: klinik-web
 spec:
   replicas: 1
