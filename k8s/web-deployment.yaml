@@ -1,19 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  namespace: $PROJECT_NAME
   name: klinik-web
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: klinik-web
+      app: $PROJECT_NAME
   template:
     metadata:
       labels:
-        app: klinik-web
+        app: $PROJECT_NAME
     spec:
       containers:
       - name: web
-        image: docker.io/youlong255/klinik-web
+        image: $REGISTRY/$DOCKERHUB_USERNAME/$APP_NAME
         ports:
         - containerPort: 80

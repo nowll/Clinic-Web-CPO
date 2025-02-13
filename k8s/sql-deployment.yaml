@@ -1,16 +1,17 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  namespace: $PROJECT_NAME
   name: klinik-db
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: klinik-db
+      app: $PROJECT_NAME
   template:
     metadata:
       labels:
-        app: klinik-db
+        app: $PROJECT_NAME
     spec:
       containers:
       - name: mysql
